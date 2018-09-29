@@ -11,6 +11,8 @@ Tiago Mendes
 #### Prerequisites
 - You must have python installed. 
 - Tested with python 2.7.9 and python3.6.6.
+- To use with python 2.7.9 you need first install requests 
+using this: `pip install requests`
 - If you are going to use the obdbapi you must enter the site 
 http://www.omdbapi.com/ then click the api_key button then enter
 your email and you will get your API_KEY. Don't share it.
