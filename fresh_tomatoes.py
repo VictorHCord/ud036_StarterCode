@@ -16,16 +16,16 @@ main_page_head = '''
         <!-- Styles -->
         <link href="css/lightbox_alt.css" rel="stylesheet" />
         <link href="css/lightbox.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
 
         <!-- Scripts -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script src="js/lightboxController.js"></script>
         <script src="js/index.js"></script>
 
         <!-- Webfonts -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+        <link href="css/montserrat.css" rel="stylesheet">
     </head>
 '''
 
@@ -35,7 +35,7 @@ main_page_content = '''
     <body>
 
         <header class="gblHead">
-            <h1>My Favorite Movie Trailers v1.1</h1>
+            <h1>My Favorite Movie Trailers v1.2</h1>
             <a class="tigo" href="mailto:tetigo@gmail.com">Tiago Mendes</a>
         </header>
 
@@ -52,7 +52,8 @@ main_page_content = '''
 
 # A single movie entry html template
 movie_tile_content = '''
-            <article class="col-12 col-md-3 col-sm-6 col-lg-2 blox bloxPopup" data-src="{trailer_youtube_url}" data-id="{id}">
+            <article class="col-12 col-md-3 col-sm-6 col-lg-2 blox bloxPopup"\
+             data-src="{trailer_youtube_url}" data-id="{id}">
                 <div class="featured">
                     <img src="{poster_image_url}" alt="" >
                 </div>
