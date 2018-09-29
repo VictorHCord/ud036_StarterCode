@@ -1,0 +1,62 @@
+* {
+  font-family: 'Montserrat', sans-serif; 
+}
+img {
+  display: block;
+  height: auto;
+  max-width:100%; 
+}
+.tigo{
+  float: right;
+  font-size: 10px;
+  color: white;
+  height: 0;
+  padding-right: 10px;
+}
+header.gblHead {
+  width: 100%;
+  padding: 20px 0;
+  background: #2c3e50;
+  margin-bottom: 20px; 
+}
+header.gblHead h1 {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+}
+article.blox {
+  cursor: pointer;
+}
+article.blox:hover .featured::before {
+  opacity: 1; 
+}
+article.blox .featured {
+  /*position: relative; */
+
+}
+article.blox .featured::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out; 
+}
+article.blox .content {
+  text-align: center;
+  color: blue;
+  font-weight: bold;
+}
+article.blox .content i {
+  color: yellow;
+}

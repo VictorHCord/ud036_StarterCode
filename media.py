@@ -6,11 +6,13 @@ class Video():
     Armazana informacoes genericas sobre Videos
     This class provides a way to store Generic Video Info
     '''
-    def __init__(self, title, duration):
+    def __init__(self, ident, title, duration):
+        self.ident = ident
         self.title = title
         self.duration = duration
 
     def show_info(self):
+        print('Id       : ' + str(self.ident))
         print('Title    : ' + self.title)
         print('Duration : ' + self.duration)
 
@@ -23,9 +25,9 @@ class Movie(Video):
 
     VALID_RATINGS = ["G", "PG", "PG-13", "R"]
 
-    def __init__(self, title, storyline, poster_image_url,
+    def __init__(self, ident, title, storyline, poster_image_url,
                  trailer_youtube_url, duration='n/a'):
-        Video.__init__(self, title, duration)
+        Video.__init__(self, ident, title, duration)
         self.storyline = storyline
         self.poster_image_url = poster_image_url
         self.trailer_youtube_url = trailer_youtube_url
@@ -46,9 +48,9 @@ class TVShow(Video):
     This class provides a way to store basic tv shows information
     '''
 
-    def __init__(self, season, episode, tv_station,
+    def __init__(self, ident, season, episode, tv_station,
                  title='n/a', duration='n/a'):
-        Video.__init__(self, title, duration)
+        Video.__init__(self, ident, title, duration)
         self.season = season
         self.episode = episode
         self.tv_station = tv_station
@@ -62,9 +64,9 @@ class TVShow(Video):
 
 if __name__ == '__main__':
 
-    Video('Generic Video', '120min').show_info()
+    Video(1, 'Generic Video', '120min').show_info()
     print('-' * 40)
-    Movie('Generic Movie', 'Some Story',
+    Movie(2, 'Generic Movie', 'Some Story',
           'poster url', 'youtube url').show_info()
     print('-' * 40)
-    TVShow('Season 1', 'Episode 1', 'Fox', 'Walking Dead').show_info()
+    TVShow(3, 'Season 1', 'Episode 1', 'Fox', 'Walking Dead').show_info()
