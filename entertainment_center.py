@@ -5,21 +5,27 @@ import json
 
 omdb_key = 'xxxxxxxx'
 
+
 def search_movie(title, omdb_key):
     try:
         # the api that we use to get the movie data
-        req = requests.get('http://www.omdbapi.com/?t='+title+'&type=movie&apikey='+omdb_key)
-        
+        req = requests.get('http://www.omdbapi.com/?t=' + title +
+                           '&type=movie&apikey=' + omdb_key)
+
         # the api returns data in the type json (thats very good)
-        # now we convert the data to dictionary to easily use inside our program
+        # now we convert the data to dictionary to easily use inside
+        # our program
         dic = json.loads(req.text)
         return dic
     except Exception as e:
         print('connection error', e)
         return None
 
-# every time we want a new movie we call this funtion using the title and our key
-movie = search_movie('blended',omdb_key)
+# every time we want a new movie we call this funtion using
+# the title and our key
+
+
+movie = search_movie('blended', omdb_key)
 if(movie['Response'] == 'False'):
     exit('Movie not found')
 
@@ -31,7 +37,7 @@ blended = Movie(
     movie['Poster'],
     "https://www.youtube.com/watch?v=8MuWt2X59fo")
 
-movie = search_movie('matrix',omdb_key)
+movie = search_movie('matrix', omdb_key)
 if(movie['Response'] == 'False'):
     exit('Movie not found')
 
@@ -43,7 +49,7 @@ matrix = Movie(
     "https://www.youtube.com/watch?v=m8e-FF8MsqU")
 
 
-movie = search_movie('300',omdb_key)
+movie = search_movie('300', omdb_key)
 if(movie['Response'] == 'False'):
     exit('Movie not found')
 
@@ -54,7 +60,7 @@ _300 = Movie(
     movie['Poster'],
     "https://www.youtube.com/watch?v=UrIbxk7idYA")
 
-movie = search_movie('v for vendetta',omdb_key)
+movie = search_movie('v for vendetta', omdb_key)
 if(movie['Response'] == 'False'):
     exit('Movie not found')
 
@@ -65,7 +71,7 @@ vendetta = Movie(
     movie['Poster'],
     "https://www.youtube.com/watch?v=lSA7mAHolAw")
 
-movie = search_movie('avatar',omdb_key)
+movie = search_movie('avatar', omdb_key)
 if(movie['Response'] == 'False'):
     exit('Movie not found')
 
@@ -76,7 +82,7 @@ avatar = Movie(
     movie['Poster'],
     "https://www.youtube.com/watch?v=5PSNL1qE6VY")
 
-movie = search_movie('the lord of the rings',omdb_key)
+movie = search_movie('the lord of the rings', omdb_key)
 if(movie['Response'] == 'False'):
     exit('Movie not found')
 
@@ -87,7 +93,7 @@ lord = Movie(
     movie['Poster'],
     "https://www.youtube.com/watch?v=V75dMMIW2B4")
 
-movie = search_movie('predator',omdb_key)
+movie = search_movie('predator', omdb_key)
 if(movie['Response'] == 'False'):
     exit('Movie not found')
 
@@ -98,7 +104,7 @@ predator = Movie(
     movie['Poster'],
     "https://www.youtube.com/watch?v=X2hBYGwKh3I")
 
-movie = search_movie('the terminator',omdb_key)
+movie = search_movie('the terminator', omdb_key)
 if(movie['Response'] == 'False'):
     exit('Movie not found')
 
@@ -109,7 +115,7 @@ terminator = Movie(
     movie['Poster'],
     "https://www.youtube.com/watch?v=k64P4l2Wmeg")
 
-movie = search_movie('alien 3',omdb_key)
+movie = search_movie('alien 3', omdb_key)
 if(movie['Response'] == 'False'):
     exit('Movie not found')
 
@@ -120,7 +126,7 @@ alien3 = Movie(
     movie['Poster'],
     "https://www.youtube.com/watch?v=KUTaNMJJBa8")
 
-movie = search_movie('world war z',omdb_key)
+movie = search_movie('world war z', omdb_key)
 if(movie['Response'] == 'False'):
     exit('Movie not found')
 
@@ -148,4 +154,3 @@ fresh_tomatoes.open_movies_page(films_list)
 # print('Sinopse..: '+filme['Plot'])
 # print('Poster...: '+filme['Poster'])
 # print('Website..: '+filme['Website'])
-
